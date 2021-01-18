@@ -19,8 +19,7 @@ export class PaymentsComponent implements OnInit {
     phoneNumber: new FormControl(''),
   });
 
-  // numberOfTollGates = new FormControl('');
-  // amountToPay = new FormControl('');
+  response = '';
   
   constructor(
     private fb: FormBuilder,
@@ -49,6 +48,8 @@ export class PaymentsComponent implements OnInit {
     const amount = payload.numberOfTollGates * payload.amountToPay;
 
     console.log(amount);
+
+
     
     const sendPayload: PaymentDTO = {
       amount: amount,
@@ -59,6 +60,11 @@ export class PaymentsComponent implements OnInit {
 
     return (await this.paymentService.paymentRequest(sendPayload)).subscribe(res => {
       console.log(res);
+      if(res.status == 200){
+        this.response = "Successfull, Please enter pin on the push notification you will get on your phone."
+      }else{
+        this.response = "Failed To Process transaction";
+      }
       
     });
     

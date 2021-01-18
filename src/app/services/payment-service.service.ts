@@ -22,13 +22,7 @@ export class PaymentServiceService {
       "apiKey": "ef72ec9d-a429-4333-a38e-5f757dc13b05"
     }
 
-   return await this.httpService.post(PAYMENT_URL+'/debit', paymentPayload).subscribe(
-     (response) => {
-       console.log(response);
-
-       return response;
-       
-     }
-   )
+   return this.httpService.post<any>(PAYMENT_URL + '/debit', paymentPayload);
+   
   }
 }

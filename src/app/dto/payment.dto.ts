@@ -1,5 +1,4 @@
-export class PaymentDTO {
+export interface PaymentDTO {
     amount: number;
     phoneNumber: string;
-
 }

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { PaymentDTO } from '../dto/payment.dto';
 import { PaymentServiceService } from '../services/payment-service.service';
 
 declare var totalA:any;
@@ -12,21 +13,22 @@ declare var totalB:any;
 })
 export class PaymentsComponent implements OnInit {
   
-  numberOfTollGates: number;
-  amountToPay: number;
-  paymentForm: FormGroup;
+  paymentForm = new FormGroup({
+    numberOfTollGates: new FormControl(''),
+    amountToPay: new FormControl(''),
+    phoneNumber: new FormControl(''),
+  });
 
-
+  // numberOfTollGates = new FormControl('');
+  // amountToPay = new FormControl('');
+  
   constructor(
     private fb: FormBuilder,
     private readonly paymentService: PaymentServiceService
     ){}
 
   ngOnInit(): void {
-    this.paymentForm = this.fb.group({
-      numberOfTollGates: [null, [Validators.required]],
-      amountToPay: [null, [Validators.required]]
-    })
+
   }
   
 
@@ -41,16 +43,24 @@ export class PaymentsComponent implements OnInit {
     totalB();
   }
 
-
-
-
-
-
-
-  
-
   async makePayment(payload: any) {
     console.log(payload);
+
+    const amount = payload.numberOfTollGates * payload.amountToPay;
+
+    console.log(amount);
+    
+    const sendPayload: PaymentDTO = {
+      amount: amount,
+      phoneNumber: payload.phoneNumber
+    }
+
+    console.log(sendPayload);
+
+    return (await this.paymentService.paymentRequest(sendPayload)).subscribe(res => {
+      console.log(res);
+      
+    });
     
   }
 

@@ -11,7 +11,7 @@
       <br>
       <br>
       <label for="">TYPE OF VEHICLE BEEN USED</label>
-      <select id="RLA" name="RLA" formContolName="amountToPay" size="1" onchange="totalA(this.value);" >
+      <select id="RLA" name="RLA" formControlName="amountToPay" size="1" onchange="totalA(this.value);" >
         
         <option value="">select the type of vehicle been used</option>
         <option value="20">car</option>
@@ -24,7 +24,7 @@
       <br>
       <br>
       <label for="">NUMBER OF TOLL GATES INTENDED TO CROSS</label>
-      <select id="RLB" name="RLB" formContolName="numberOfTollGates"  size="1" onchange="totalB(this.value);">
+      <select id="RLB" name="RLB" formControlName="numberOfTollGates"  size="1" onchange="totalB(this.value);">
         <option value="">select number of toll gates you intended to cross</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -39,6 +39,7 @@
       
       </select>
 
+
       <br>
       <br>
       <br>
@@ -46,6 +47,11 @@
       <br>
       <br>
       
+      <label>
+        Phone Number:
+        <input type="text" formControlName="phoneNumber" placeholder="Enter phone number starting with 260">
+      </label>
+
       <input type="submit" value="Submit"> 
     </form></td>
    

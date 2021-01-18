@@ -1,0 +1,40 @@
+
+     <div class="row">
+        <div class="column left">
+          <img [src]='myimage' alt=''>
+        </div>
+        <div class="column right" style="background-color:#f0f8f0;" >
+          
+          <h1>CHECK NUMBER OF TOLL GATES FOR SPECIFIC ROUTE</h1>
+          <hr>
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-label>SELECT ROUTE</mat-label>
+            <mat-select [(value)]="selected">
+              <mat-option>None</mat-option>
+              <mat-option value='2'>lusaka - chipata</mat-option>
+              <mat-option value="3 "   >lusaka - ndola </mat-option>
+              <mat-option value="3">lusaka - livingstone</mat-option>
+              <mat-option value="4">lusaka - nakonde</mat-option>
+              <mat-option value="5">lusaka - solowezi</mat-option>
+              <mat-option value="">lusaka - mongu</mat-option>
+              <mat-option value="option1">lusaka - chilaombwe</mat-option>
+              <mat-option value="option2">livingstone - ndola</mat-option>
+              <mat-option value="option3">Option 3</mat-option>
+              <mat-option value="option1">Option 1</mat-option>
+              <mat-option value="option2">Option 2</mat-option>
+              <mat-option value="option3">Option 3</mat-option>
+            </mat-select>
+          </mat-form-field>
+          
+  <p>NUMBER OF TOLL GATES: {{selected}}</p>
+  
+  
+         
+      </div>
+      
+     
+        
+        
+  
+        

@@ -1,0 +1,179 @@
+<div class="row">
+    <div class="column left">
+        <h1>TOLL TARIFF STRUCTURE</h1>
+        <table id="customers" style="width:100%">
+            <tr>
+                <th>DESCRIPTION</th> 
+              <th>VEHICLE</th>
+              <th>PRICE</th> 
+           
+            </tr>
+            <tr>
+                <td>3,500 - 6,500 Kg,</td>
+              <td style="text-align:center"><img [src]='myimage' alt=''></td>
+              <td>K20</td>
+       
+            </tr>
+            <tr>
+                <td>3,500 - 6,500 Kg</td>
+              <td style="text-align:center"> <img [src]='myimage1' alt=''></td>
+              <td>K40</td>
+           
+            </tr>
+            <tr>
+                <td>16,501-30,000 kg</td>
+              <td style="text-align:center"><img [src]='myimage2' alt=''></td>
+              <td>K50</td>
+        
+            </tr>
+            <tr>
+                <td>30,000-56,000 Kg</td>
+                <td style="text-align:center"><img [src]='myimage3' alt=''></td>
+                <td>K50</td>
+          
+              </tr>
+              <tr>
+                <td>56,000 - 70,000 kg</td>
+                <td style="text-align:center"><img [src]='myimage4' alt=''></td>
+                <td>K150</td>
+          
+              </tr>
+              <tr>
+                <td>above 70,000 jg</td>
+                <td style="text-align:center"><img [src]='myimage5' alt=''></td>
+                <td>K500</td>
+          
+              </tr>
+          </table>
+          
+    </div>
+    
+    <div class="column right" >
+      <div class="vl">
+        <h1>CACULATE TOTAL COSTS </h1>
+        <mat-tab-group>
+          <mat-tab label="SPECIFIC ROUTE"> 
+            <td><form action="index.php?c=ref">
+
+             
+             
+              <label for="">TYPE OF VEHICLE BEEN USED</label>
+              <select id="RLA" name="RLA" size="1" onchange="totalA(this.value);" >
+                
+                <option value="">select the type of vehicle been used</option>
+                <option value="20">car</option>
+                <option value="40">van</option>
+                <option value="50">light truck</option>
+                <option value="50">bus</option>
+                <option value="150">truck</option>
+                <option value="500">abnormal truck</option>
+              </select>
+              <br>
+              <br>
+              <label for="">NUMBER OF TOLL GATES INTENDED TO CROSS</label>
+              <select id="RLB" name="RLB" size="1" onchange="totalB(this.value);">
+                <option value="">select number of toll gates you intended to cross</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              
+              </select>
+             
+            </form></td>
+            <br>
+            <br>
+            <br>
+            <td>Total Cost: <input id="showTB" name="showTB" type="text" value="K0.00" size="3" /></td>
+            <br>
+            <br>
+            <input type="submit" value="MAKE PAYMENT">
+
+
+
+
+
+
+
+
+
+          </mat-tab>
+          <mat-tab label="SELECTED TOLL GATES">
+
+            <td><form action="index.php?c=ref">
+
+             
+             
+              <label for="">TYPE OF VEHICLE BEEN USED</label>
+              <select id="RLA" name="RLA" size="1" onchange="totalA(this.value);" >
+                
+                <option value="">select the type of vehicle been used</option>
+                <option value="20">car</option>
+                <option value="40">van</option>
+                <option value="50">light truck</option>
+                <option value="50">bus</option>
+                <option value="150">truck</option>
+                <option value="500">abnormal truck</option>
+              </select>
+              <br>
+              <br>
+              <label for="">NUMBER OF TOLL GATES INTENDED TO CROSS</label>
+              <select id="RLB" name="RLB" size="1" onchange="totalB(this.value);">
+                <option value="">select number of toll gates you intended to cross</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              
+              </select>
+             
+            </form></td>
+            <br>
+            <br>
+            <br>
+            <td>Total Cost: <input id="showTB" name="showTB" type="text" value="K0.00" size="3" /></td>
+            <br>
+            <br>
+            <input type="submit" value="MAKE PAYMENT">
+  
+
+
+
+
+
+
+
+
+          </mat-tab>
+         
+
+
+
+
+
+
+
+
+        </mat-tab-group>
+      
+      </div>
+   
+      </div>
+  </div>
+  
+ 
+    
+    
+

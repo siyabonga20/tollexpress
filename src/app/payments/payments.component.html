@@ -1,0 +1,58 @@
+<br>
+<mat-tab-group>
+  <mat-tab label="Airtel Money"> 
+    <h1>PAYMENT FORM</h1>
+    <hr class="new5">
+    
+    <td><form [formGroup]="paymentForm" (ngSubmit)="makePayment(paymentForm.value)">
+    
+      <label for="">VEHICLE REGISTRATION NUMBER</label>
+      <input type="text" id="fname" name="" placeholder="NUMBER PLATE">
+      <br>
+      <br>
+      <label for="">TYPE OF VEHICLE BEEN USED</label>
+      <select id="RLA" name="RLA" formContolName="amountToPay" size="1" onchange="totalA(this.value);" >
+        
+        <option value="">select the type of vehicle been used</option>
+        <option value="20">car</option>
+        <option value="40">van</option>
+        <option value="50">light truck</option>
+        <option value="50">bus</option>
+        <option value="150">truck</option>
+        <option value="500">abnormal truck</option>
+      </select>
+      <br>
+      <br>
+      <label for="">NUMBER OF TOLL GATES INTENDED TO CROSS</label>
+      <select id="RLB" name="RLB" formContolName="numberOfTollGates"  size="1" onchange="totalB(this.value);">
+        <option value="">select number of toll gates you intended to cross</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      
+      </select>
+
+      <br>
+      <br>
+      <br>
+      <td>Total Cost: <input id="showTB" name="showTB" type="text" value="K0.00" size="3" /></td>
+      <br>
+      <br>
+      
+      <input type="submit" value="Submit"> 
+    </form></td>
+   
+     
+  
+
+  </mat-tab>
+  <mat-tab label="MTN MOMO"> MTN MOMO</mat-tab>
+  <mat-tab label="zamtel Kwacha"> zamtel </mat-tab>
+</mat-tab-group>

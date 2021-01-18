@@ -1,0 +1,1 @@
+export const PAYMENT_URL = 'https://chuuma-payment-gateway.herokuapp.com';

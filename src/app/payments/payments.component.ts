@@ -61,9 +61,9 @@ export class PaymentsComponent implements OnInit {
     return (await this.paymentService.paymentRequest(sendPayload)).subscribe(res => {
       console.log(res);
       if(res.status == 200){
-        this.response = "Successfull, Please enter pin on the push notification you will get on your phone."
+        this.response = "Please enter pin on the push notification you will get on your phone to process your transaction."
       }else{
-        this.response = "Failed To Process transaction";
+        this.response = "Failed To Process transaction"
       }
       
     });

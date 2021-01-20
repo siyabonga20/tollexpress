@@ -53,7 +53,7 @@
         <h1>CACULATE TOTAL COSTS </h1>
         <mat-tab-group>
           <mat-tab label="SPECIFIC ROUTE"> 
-            <td><form action="index.php?c=ref">
+            <td><form [formGroup]="specificRouteForm" action="index.php?c=ref">
 
              
              
@@ -106,7 +106,7 @@
           </mat-tab>
           <mat-tab label="SELECTED TOLL GATES">
 
-            <td><form action="index.php?c=ref">
+            <td><form [formGroup]="selectForm" action="index.php?c=ref">
 
              
              
